@@ -14,7 +14,7 @@ const Index = () => {
         <div>
             {!isAuth && <Header/>}
             <Routes>
-                <Route path="/" element={<Navigate to="/login"/>} />
+                <Route path="/" element={<login/>} />
                 <Route path="/login" element={data.jwtToken ? <Login /> : <Navigate to="/LeadManagement"/>} />
                 <Route path="/register" element={data.jwtToken ? <Register /> : <Navigate to="/LeadManagement"/>} />
                 <Route path="/manage/users" element={<ManageUser />} />
